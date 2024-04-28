@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "backend",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "server.main",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/backend",
+            "envFile": "${workspaceFolder}/.local.env",
+            "env": {
+                "LANGCHAIN_TRACING_V2": "true",
+                "LANGCHAIN_ENDPOINT": "https://api.smith.langchain.com",
+                "LANGCHAIN_API_KEY": "ls__60721855f18c4742b4892dbec16147a4",
+                "LANGCHAIN_PROJECT": "Langchain-extract"
+            },
+        },
+        {
+            "name": "frontend",
+            "type": "chrome",
+            "request": "launch",            
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}/frontend",
+        }
+    ]
+}
